@@ -1,0 +1,444 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;300;400;500;600;700;800&display=swap');
+/* variable */
+:root {     
+    --base-color: #AF985A;
+    /* Necessário para os efeitos rgba() do .gt-choice */
+    --base-color-rgb: 175, 152, 90;
+
+    --dark-gray: #33322f;
+    --medium-gray:#868d98;
+    --primary-font: 'Be Vietnam', sans-serif;
+    --alt-font: 'Sora', sans-serif;
+}
+/* reset */
+body { 
+    font-size: 17px;
+    line-height: 32px;
+}
+/* header */
+header .navbar-brand img {
+    max-height: 26px;
+}
+.navbar .navbar-nav .nav-link {
+    font-size: 17px;
+    font-weight: 400;
+}
+.sticky .header-transparent .header-button .btn {
+    color: var(--dark-gray);
+    border-color: var(--dark-gray);
+}
+.sticky .header-transparent .header-button .btn:hover {
+    border-color: var(--dark-gray);
+    color: var(--white);
+    background:  var(--dark-gray);
+}
+header.sticky.sticky-active [data-header-hover="light"] .widget-text i {
+    color: var(--white);
+}
+/* accordion style 02 */
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu {
+    background-color: var(--dark-gray);
+}
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li:hover a,
+.navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li.active a{
+    opacity: .5;
+}
+/* bg color */
+.bg-gradient-sherpa-blue-black {
+    background-image: linear-gradient(to right top, #23248C, #22236D, #232348, #222226, #232323);
+}
+.bg-gradient-sherpa-black-blue {
+    background-image: linear-gradient(to right top, #232323, #222226, #232348, #22236D, #23248C);
+} 
+/* bg transparent color */
+.bg-base-color-transparent {
+    background-color: rgba(87, 88, 214,.8);
+}
+/*  tabs style 05  */
+.tab-style-05 .nav-tabs > li.nav-item {
+    letter-spacing: -.5px;
+}
+/* accordion */
+.accordion .accordion-item .accordion-header .accordion-title i {
+    top: 52%;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {margin-bottom: 25px}
+
+/*  progress bar style 01  */
+.progress-bar-style-01 .progress .progress-bar-title {
+    bottom: 15px;
+}
+/* page title */
+.page-title-extra-large h1 {
+    font-size: 4.7rem;
+    line-height: 4.7rem;
+}
+/* separator line */
+.separator-line-9px {
+    height: 9px;
+}
+/* tag */
+.tag-cloud a { 
+    padding-top: 5px;
+    padding-bottom: 9px;
+}
+/* blog comment */ 
+.blog-comment li .btn-reply {
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+/* number pagination style 01 */
+.pagination-style-01 .page-item .page-link {
+    line-height: 42px;
+}
+.pagination-style-01 .page-item.active .page-link {
+    background: var(--dark-gray);
+    color: var(--white);
+}
+/* top right bottom left */
+.bottom-minus-45px {
+    bottom: -45px;
+}
+.right-minus-45px {
+    right: -45px;
+}
+/* footer */
+footer .footer-logo img {
+    max-height: 26px;
+}
+footer ul li {
+    margin-bottom: 0;
+}
+.footer-dark a:hover {
+    color: var(--white);
+}
+/* model popup */
+.mfp-bg {
+    background: #000000;
+    opacity: 0.7;
+}
+/* media query responsive */
+@media (max-width: 1499px) {
+    .navbar .navbar-nav .nav-link {
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+}
+@media (max-width: 1399px) {
+    .navbar .navbar-nav .nav-link {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .sticky-wrap.shadow-in {
+        left: 35px;
+    }
+}
+@media (max-width: 1300px) {
+    .sticky-wrap.shadow-in {
+        left: 10px;
+    }
+}
+@media (max-width: 991px) {
+    .header-transparent .header-button .btn {
+        color: var(--dark-gray);
+        border-color: var(--dark-gray);
+    }
+    .header-transparent .header-button .btn:hover {
+        border-color: var(--dark-gray);
+        color: var(--white);
+        background:  var(--dark-gray);
+    }
+    .navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu {
+        width: calc(100% + 30px) !important;
+        margin-left: -15px;
+        padding: 10px 45px;
+        margin-bottom: 0;
+        margin-right: -15px;
+    }
+    .navbar .navbar-nav .dropdown.dropdown-with-icon-style02 .dropdown-menu li:last-child a {
+        padding-bottom: 17px;
+    }
+}
+@media (max-width: 767px) {
+    p {
+        margin-bottom: 20px;
+    }
+    .page-title-extra-large h1 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}
+
+.gt-contract-form .gt-choice{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* neutraliza utilitários (caso sejam usados no label) */
+.gt-contract-form .gt-choice.border,
+.gt-contract-form .gt-choice[class*="border-"]{
+  border: 0 !important;
+}
+.gt-contract-form .gt-choice.p-15px,
+.gt-contract-form .gt-choice.p-20px{
+  padding: 0 !important;
+}
+
+/* esconde input nativo (radio/checkbox) */
+.gt-contract-form .gt-choice > input[type="radio"],
+.gt-contract-form .gt-choice > input[type="checkbox"]{
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  pointer-events: none !important;
+}
+
+/* o "botão" */
+.gt-contract-form .gt-choice .gt-choice-text{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px 14px 52px;
+  border: 1px solid var(--extra-medium-gray);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--dark-gray);
+  line-height: 1.25;
+  transition: all .18s ease;
+}
+
+/* hover */
+.gt-contract-form .gt-choice:hover .gt-choice-text{
+  border-color: color-mix(in srgb, var(--base-color) 55%, var(--extra-medium-gray));
+}
+
+/* foco acessível */
+.gt-contract-form .gt-choice > input:focus-visible + .gt-choice-text{
+  border-color: var(--base-color);
+  box-shadow: 0 0 0 4px rgba(var(--base-color-rgb), .18);
+}
+
+/* “caixinha/bolinha” à esquerda */
+.gt-contract-form .gt-choice .gt-choice-text:before{
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--extra-medium-gray);
+  background: var(--white);
+  transition: all .18s ease;
+}
+
+/* RADIO = círculo */
+.gt-contract-form .gt-choice > input[type="radio"] + .gt-choice-text:before{
+  border-radius: 999px;
+}
+
+/* CHECKBOX = quadrado */
+.gt-contract-form .gt-choice > input[type="checkbox"] + .gt-choice-text:before{
+  border-radius: 6px;
+}
+
+/* marcador interno (check ou dot) */
+.gt-contract-form .gt-choice .gt-choice-text:after{
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  opacity: 0;
+  transition: all .18s ease;
+}
+
+/* ponto do radio */
+.gt-contract-form .gt-choice > input[type="radio"] + .gt-choice-text:after{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--white);
+  transform: translateY(-50%);
+  left: 21px;
+}
+
+/* check do checkbox */
+.gt-contract-form .gt-choice > input[type="checkbox"] + .gt-choice-text:after{
+  width: 7px;
+  height: 12px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-58%) rotate(45deg);
+}
+
+/* estado selecionado */
+.gt-contract-form .gt-choice > input:checked + .gt-choice-text{
+  border-color: var(--base-color);
+  box-shadow: 0 0 0 4px rgba(var(--base-color-rgb), .12);
+}
+.gt-contract-form .gt-choice > input:checked + .gt-choice-text:before{
+  border-color: var(--base-color);
+  background: var(--base-color);
+}
+.gt-contract-form .gt-choice > input:checked + .gt-choice-text:after{
+  opacity: 1;
+}
+
+/* inválido (quando marcamos .is-invalid no input) */
+.gt-contract-form .gt-choice > input.is-invalid + .gt-choice-text{
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 4px rgba(220, 53, 69, .12) !important;
+}
+
+/* desabilitado */
+.gt-contract-form .gt-choice > input:disabled + .gt-choice-text{
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* mobile: espaçamento mais limpo */
+@media (max-width: 767px){
+  .gt-contract-form .gt-choice .gt-choice-text{
+    min-height: 50px;
+    padding: 12px 14px 12px 50px;
+  }
+}
+
+
+/* Termos: impedir quebra "em colunas" e alinhar texto */
+.gt-contract-form .gt-terms-choice .gt-choice-text{
+  align-items: flex-start;
+  gap: 0;
+  white-space: normal;
+  flex-wrap: wrap;
+  line-height: 1.35;
+}
+
+/* garante que o texto ocupe a linha toda */
+.gt-contract-form .gt-terms-choice .gt-choice-text,
+.gt-contract-form .gt-terms-choice .gt-choice-text *{
+  max-width: 100%;
+}
+
+/* mobile: padding um pouco mais confortável */
+@media (max-width: 767px){
+  .gt-contract-form .gt-terms-choice .gt-choice-text{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.gt-contract-form .gt-terms-title{
+  font-weight: 700;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+
+/* Contrato: mantém rolagem + texto menor */
+.gt-contract-scroll{
+  max-height: 220px !important;
+  overflow: auto !important;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+  .gt-contract-scroll{
+    font-size: 12px;
+    line-height: 1.30;
+  }
+}
+/* Date input com fonte do site + cor base no seletor nativo */
+.gt-contract-form input[type="date"]{
+  font-family: var(--primary-font);
+  accent-color: var(--base-color);   /* muda o destaque/seleção do calendário (Chrome/Edge/Android) */
+}
+
+/* ícone do calendário (Chrome/Edge/WebKit) */
+.gt-contract-form input[type="date"]::-webkit-calendar-picker-indicator{
+  opacity: .85;
+  cursor: pointer;
+  filter: grayscale(1) brightness(.4); /* remove o azul padrão do ícone */
+}
+
+/* foco coerente com o tema */
+.gt-contract-form input[type="date"]:focus{
+  border-color: var(--base-color);
+  box-shadow: 0 0 0 4px rgba(var(--base-color-rgb), .18);
+}
+
+  #gt-page-loader{
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+
+    /* fundo neutro (você pode ajustar) */
+    background: rgba(0,0,0,.92);
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .45s ease, visibility .45s ease;
+  }
+  #gt-page-loader.gt-hide{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  #gt-page-loader .gt-spinner{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.25);
+    border-top-color: rgba(255,255,255,.9);
+    animation: gtspin .9s linear infinite;
+  }
+  #gt-page-loader .gt-text{
+    color: rgba(255,255,255,.85);
+    font-size: 14px;
+    letter-spacing: .2px;
+  }
+  @keyframes gtspin{ to{ transform: rotate(360deg); } }
+  
+  /* Botão REMOVER sobreposto na prévia, no mesmo padrão do botão base */
+.gt-doc-remove-btn {
+  background: #b89b57;          /* use a mesma cor do seu botão base */
+  color: #fff;
+  border: 0;
+  border-radius: 999px;         /* redondinho */
+  padding: 8px 14px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+  margin: 10px;
+}
+
+.gt-doc-remove-btn:hover,
+.gt-doc-remove-btn:focus {
+  filter: brightness(0.95);
+  outline: none;
+}
+
+.gt-doc-remove-btn:active {
+  transform: translateY(1px);
+}
